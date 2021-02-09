@@ -11,6 +11,10 @@ def index():
                'report2': 'slug2'}
     return render_template('index.html', title='index', user=user, reports=reports)
 
+@app.route('/<name>')
+def hello_name(name):
+    return "Hello {}!".format(name)
+    
 @app.route('/slug1')
 def slug1():
     user = {'username': 'Knobber'}
