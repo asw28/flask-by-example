@@ -28,6 +28,15 @@ heroku run python app.py --app wordcount-pro-1337
 heroku run python app.py --app wordcount-stage-1337
 
 
+
+### alembic stuff
+
+python manage.py db init
+
+python manage.py db migrate
+
+python manage.py db upgrade
+
 ### notes
 
 
