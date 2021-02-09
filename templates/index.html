@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Report Directory</title>
+    </head> 
+    <body>
+        <ul>
+        {% for r in reports %}
+            <li>
+                <a href="{{ url_for('page', slug=r) }}">{{ r }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+    </body>
+</html> 
