@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% if title %}
+        <title>{{ title }} - flask-by-example</title>
+        {% else %}
+        <title>Welcome to flask-by-example!</title>
+        {% endif %}
+    </head>
+    <body>
+        <h3>Hello, {{ user.username }}!</h3>
+        This is report {{ info.pagetitle }}
+        <li>
+            <a href="{{ url_for('index') }}">Back to index</a>
+        </li>
+    </body>
+</html> 
