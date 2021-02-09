@@ -26,3 +26,33 @@ heroku config:set APP_SETTINGS=config.ProductionConfig --remote pro
 heroku run python app.py --app wordcount-pro-1337
 
 heroku run python app.py --app wordcount-stage-1337
+
+
+### notes
+
+
+<html>
+    <head>
+        <title>{{ title }} - Microblog</title>
+    </head>
+    <body>
+        <h1>Hello, {{ user.username }}!</h1>
+    </body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Report Directory</title>
+    </head> 
+    <body>
+        <ul>
+        {% for r in reports %}
+            <li>
+                <a href="{{ url_for('page', slug=r) }}">{{ r }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+    </body>
+</html> 
